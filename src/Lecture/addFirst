@@ -1,0 +1,34 @@
+public class LinkedList<E> {
+    private Node<E> head = null;
+    private Node<E> tail = null;
+    private int size = 0;
+
+    // Node class definition here
+
+    // Add element to the beginning of the linked list
+    public void addFirst(E e) {
+        Node<E> newNode = new Node<>(e);
+        newNode.next = head;
+        head = newNode;
+        if (tail == null) {
+            tail = head;
+        }
+        size++;
+    }
+
+    // Add element to the end of the linked list
+    public void addLast(E e) {
+        Node<E> newNode = new Node<>(e);
+        if (tail == null) {
+            head = tail = newNode;
+        } else {
+            tail.next = newNode;
+            tail = newNode;
+        }
+        size++;
+    }
+
+    public void add(int index, E e){
+        if(index == 0) addFirst(e);
+    }
+}
