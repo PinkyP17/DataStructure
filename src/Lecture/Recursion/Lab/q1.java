@@ -23,5 +23,6 @@ public class q1{
         }
 
     }
+    //been a while since updated this code
 
 }
